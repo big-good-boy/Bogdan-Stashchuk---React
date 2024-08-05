@@ -10,15 +10,17 @@ function TodoForm({ addTodo }) {
 	};
 
 	return (
-		<form onSubmit={onSubmitHandler}>
-			<input
-				type="text"
-				placeholder="Enter new todo"
-				value={text}
-				onChange={(e) => setText(e.target.value)}
-			/>
-			<button>Submit</button>
-		</form>
+		<div className={styles.todoFormContainer}>
+			<form onSubmit={onSubmitHandler}>
+				<input
+					type="text"
+					placeholder="Enter new todo"
+					value={text}
+					onChange={(e) => setText(e.target.value)}
+				/>
+				<button>Submit</button>
+			</form>
+		</div>
 	);
 }
 
