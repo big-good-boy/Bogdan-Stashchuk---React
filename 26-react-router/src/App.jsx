@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import Home from './components/Home';
+import Courses from './components/Courses';
+import SingleCourse from './components/SingleCourse';
 import About from './components/About';
 import Contacts from './components/Contacts';
 import NotFound from './components/NotFound';
@@ -13,6 +15,8 @@ function App() {
 				<Routes>
 					<Route path="/" element={<MainLayout />}>
 						<Route index element={<Home />} />
+						<Route path="courses" element={<Courses />} />
+						<Route path="courses/:courseSlug" element={<SingleCourse />} />
 						<Route path="about" element={<About />} />
 						<Route path="contacts" element={<Contacts />} />
 						<Route path="*" element={<NotFound />} />
